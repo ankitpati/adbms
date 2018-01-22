@@ -3,6 +3,7 @@
  * Author: Ankit Pati
  */
 
+alter session set current_schema = adbms;
 set serveroutput on;
 
 declare
