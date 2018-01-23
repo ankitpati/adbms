@@ -27,7 +27,7 @@ begin
     end loop;
 
     dbms_output.put_line('For Loop');
-    for n in reverse 1..10 loop
+    for n in reverse l..10 loop
         dbms_output.put_line(n);
     end loop;
 end;
@@ -57,9 +57,5 @@ For Loop
 7
 6
 5
-4
-3
-2
-1
 
 */
