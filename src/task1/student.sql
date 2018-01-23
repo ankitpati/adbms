@@ -9,8 +9,8 @@ set serveroutput on;
 drop table student;
 create table student (
     prn   integer primary key,
-    fname char(100) not null,
-    lname char(100) not null
+    fname varchar2(100) not null,
+    lname varchar2(100) not null
 );
 
 begin
