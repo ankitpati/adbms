@@ -18,13 +18,19 @@ insert into customer values (543, 'Tiashaa Chatterjee', 'Cuttack');
 begin
     <<getcustomer>>
     declare
+        cid   integer := :customer_id;
         cname char(100);
         addrs char(100);
+        negative_customer_id exception;
     begin
+        if cid <= 0 then
+            raise negative_customer_id;
+        end if;
+
         select cname, addrs
         into   cname, addrs
         from   customer
-        where  cid = :customer_id;
+        where  cid = getcustomer.cid;
 
         dbms_output.put_line('Name ' || cname);
         dbms_output.new_line;
@@ -32,6 +38,9 @@ begin
     exception
         when no_data_found then
             dbms_output.put_line('No such customer.');
+
+        when negative_customer_id then
+            dbms_output.put_line('Invalid customer ID.');
     end;
 end;
 /
