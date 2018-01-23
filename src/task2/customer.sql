@@ -48,7 +48,14 @@ end;
 
 /* OUTPUT
 
-PRN  506
-Name Ankit Pati
+Input: 543
+Name Tiashaa Chatterjee
+Addr Cuttack
+
+Input: 435
+No such customer.
+
+Input: -5
+Invalid customer ID.
 
 */
