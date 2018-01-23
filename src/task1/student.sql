@@ -12,6 +12,8 @@ create table student (
     fname varchar2(100) not null,
     lname varchar2(100) not null
 );
+insert into student values (506, 'Ankit', 'Pati');
+insert into student values (543, 'Tiashaa', 'Chatterjee');
 
 begin
     <<getnames>>
@@ -20,9 +22,6 @@ begin
         fname char(100);
         lname char(100);
     begin
-        insert into student values (506, 'Ankit', 'Pati');
-        insert into student values (543, 'Tiashaa', 'Chatterjee');
-
         select fname, lname
         into   fname, lname
         from   student
