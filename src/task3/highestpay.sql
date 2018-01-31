@@ -8,6 +8,8 @@ set serveroutput on;
 
 /* relying on Oracle built-in table emp */
 
+drop type ees_table;
+
 create or replace type empno_ename_sal as object (
     empno number(4, 0),
     ename varchar2(10),
