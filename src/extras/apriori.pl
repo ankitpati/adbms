@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # apriori.pl
-# Date  : 19 March 2016
+# Date  : 19 March 2018
 # Author: Ankit Pati
 
 use strict;

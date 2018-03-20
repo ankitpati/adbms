@@ -1,5 +1,5 @@
 /* employee.sql */
-/* Date  : 19 February 2016
+/* Date  : 19 February 2018
  * Author: Ankit Pati
  */
 
@@ -58,6 +58,6 @@ EMPID ENAME              SALRY
 
 AUDID EMPID OLSAL NWSAL UDATE
 ----- ----- ----- ----- -------------------
-    1   506   143 157.3 2018-02-19 12:27:47
+    1   506   143 157.3 2016-02-19 12:27:47
 
 */

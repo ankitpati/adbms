@@ -1,5 +1,5 @@
 /* isprime.sql */
-/* Date  : 29 January 2016
+/* Date  : 29 January 2018
  * Author: Ankit Pati
  */
 

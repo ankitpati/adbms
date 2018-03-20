@@ -1,5 +1,5 @@
 /* factorial.sql */
-/* Date  : 23 January 2016
+/* Date  : 23 January 2018
  * Author: Ankit Pati
  */
 
