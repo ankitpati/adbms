@@ -39,8 +39,6 @@ enter empty line to end input.
 
 EOF
 
-$l[0] = {};
-
 # Input Section
 while (<>) {
     chomp;
