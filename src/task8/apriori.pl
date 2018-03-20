@@ -34,7 +34,8 @@ print "\n";
 
 print <<'EOF';
 Enter one transaction per line;
-separate items with spaces.
+separate items with spaces;
+enter empty line to end input.
 
 EOF
 
@@ -43,6 +44,7 @@ $l[0] = {};
 # Input Section
 while (<>) {
     chomp;
+    last unless $_;
     $_ = lc;
 
     my @uniq_items = uniq map ucfirst, split;
@@ -120,12 +122,14 @@ Minimum Support?
 2
 
 Enter one transaction per line;
-separate items with spaces.
+separate items with spaces;
+enter empty line to end input.
 
 1 3 4
 2 3 5
 1 2 3 5
 2 5
+
 
 Table L1
 1 => 2
