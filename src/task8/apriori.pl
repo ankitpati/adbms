@@ -84,7 +84,7 @@ for (my $i = 0; $l[$i]; ++$i) {
 
                 foreach my $subset (subsets \@candidates, @candidates - 1) {
                     $l[$i + 1]->{join ',', @candidates} = getcount @candidates
-                        if (exists $l[$i]->{join ',', sort @$subset});
+                        if exists $l[$i]->{join ',', sort @$subset};
                 }
             }
         }
