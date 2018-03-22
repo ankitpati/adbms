@@ -12,7 +12,7 @@ use Algorithm::Combinatorics 'subsets';
 my (@l, @txns);
 
 # Helper Subroutines
-sub uniq { keys %{{ map { $_ => 1 } @_ }} }
+sub uniq { my %h; undef @h{@_}; keys %h }
 sub issubset { my %h; undef @h{@{(shift)}}; delete @h{@{(shift)}}; !%h }
 
 sub getcount {
