@@ -7,8 +7,6 @@
 use strict;
 use warnings;
 
-use Data::Dumper;
-
 use Algorithm::Combinatorics 'subsets';
 
 my (@l, @txns);
