@@ -99,7 +99,7 @@ foreach my $ltable (@l) {
 
     foreach (sort keys %$ltable) {
         my $display_key = join ', ', split ',';
-        print "$display_key => $ltable->{$_}\n";
+        print "\t$display_key => $ltable->{$_}\n";
     }
     print "\n";
 
@@ -126,16 +126,16 @@ enter empty line to end input.
 
 
 Table L1
-1 => 2
-2 => 3
-3 => 3
-5 => 3
+    1 => 2
+    2 => 3
+    3 => 3
+    5 => 3
 
 Table L2
-1, 3 => 2
-2, 3 => 2
-2, 5 => 3
-3, 5 => 2
+    1, 3 => 2
+    2, 3 => 2
+    2, 5 => 3
+    3, 5 => 2
 
 Table L3
-2, 3, 5 => 2
+    2, 3, 5 => 2
