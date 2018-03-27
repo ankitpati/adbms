@@ -19,7 +19,7 @@ sub getcount {
     my $count = 0;
 
     foreach (@txns) {
-        ++$count if issubset \@_, \@$_;
+        ++$count if issubset \@_, $_;
     }
 
     return $count;
@@ -46,21 +46,19 @@ while (<>) {
     my @uniq_items = uniq map ucfirst, split;
     @uniq_items = sort @uniq_items;
 
-    my @txn_items;
     foreach (@uniq_items) {
-        push @txn_items, $_;
-        $l[0]->{$_} ||= 0;
+        $l[0]{$_} ||= 0;
         ++$l[0]{$_};
     }
 
-    push @txns, \@txn_items if @txn_items;
+    push @txns, \@uniq_items if @uniq_items;
 }
 # end of Input Section
 
 # A-priori Logic
 for (my $i = 0; $l[$i]; ++$i) {
     while (my ($key, $val) = each %{$l[$i]}) {
-        delete $l[$i]->{$key} if $val < $minsup;
+        delete $l[$i]{$key} if $val < $minsup;
     }
 
     my @colls = sort keys %{$l[$i]};     # collections of items
@@ -83,8 +81,8 @@ for (my $i = 0; $l[$i]; ++$i) {
                 @candidates = sort @candidates;
 
                 foreach my $subset (subsets \@candidates, @candidates - 1) {
-                    $l[$i + 1]->{join ',', @candidates} = getcount @candidates
-                        if exists $l[$i]->{join ',', sort @$subset};
+                    $l[$i + 1]{join ',', @candidates} = getcount @candidates
+                        if exists $l[$i]{join ',', sort @$subset};
                 }
             }
         }
